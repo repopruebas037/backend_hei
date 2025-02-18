@@ -31,7 +31,8 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
     '.vercel.app',  
-    'backend-np14mirmk-heis-projects-181257de.vercel.app'  # Agrega tu dominio exacto
+    'backend-np14mirmk-heis-projects-181257de.vercel.app'
+    'http://localhost:3000/chatbot'
 ]
 
 
