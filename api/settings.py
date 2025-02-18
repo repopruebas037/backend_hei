@@ -23,7 +23,7 @@ ALLOWED_HOSTS = [
 # Configuración de CORS
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # React en desarrollo
-    "https://tu-frontend.vercel.app",  # (Opcional) Frontend en producción
+    "https://fronthei.vercel.app",  # (Opcional) Frontend en producción
 ]
 
 CORS_ALLOW_CREDENTIALS = True  # Permitir envío de cookies o tokens de autenticación
