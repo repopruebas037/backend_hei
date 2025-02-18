@@ -22,4 +22,3 @@ sqlparse==0.5.3
 tqdm==4.67.1
 typing_extensions==4.12.2
 tzdata==2025.1
-django-cors-headers==4.3.1 
