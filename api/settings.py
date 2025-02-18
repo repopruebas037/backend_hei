@@ -29,6 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.vercel.app']
 
+CORS_ALLOW_ALL_ORIGINS = True
 
 # Application definition
 
