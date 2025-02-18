@@ -30,9 +30,9 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
-    '.vercel.app',  
-    'backend-np14mirmk-heis-projects-181257de.vercel.app'
-    'http://localhost:3000/chatbot'
+    '.vercel.app',
+    'backend-np14mirmk-heis-projects-181257de.vercel.app',  # Agregar tu backend en Vercel
+    'localhost:3000',  # Permitir React en desarrollo
 ]
 
 
