@@ -19,7 +19,7 @@ INSTALLED_APPS = [
     'example',
 ]
 ```
-##holaaaaaaaaa
+##holaaaaaaaaa2
 
 We allow "\*.vercel.app" subdomains in `ALLOWED_HOSTS`, in addition to 127.0.0.1:
 
