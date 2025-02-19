@@ -32,14 +32,13 @@ CORS_ALLOW_HEADERS = ["Authorization", "Content-Type"]
 
 # Aplicaciones instaladas
 INSTALLED_APPS = [
-    'corsheaders',  # Mover al inicio para asegurar que se carga correctamente
+    'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'corsheaders',
     'example',
     'chatbot',
 ]
