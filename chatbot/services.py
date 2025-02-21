@@ -27,7 +27,7 @@ def get_chat_response(user_prompt):
         dev_prompt = file.read()
 
     completion = client.beta.chat.completions.parse(
-        model="gpt-3.5-turbo",
+        model="gpt-4o-2024-08-06",
         messages=[
             {"role": "developer", "content": dev_prompt},
             {"role": "user", "content": user_prompt}
