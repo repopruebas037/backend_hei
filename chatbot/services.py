@@ -27,12 +27,14 @@ def get_chat_response(user_prompt):
         dev_prompt = file.read()
 
     completion = client.beta.chat.completions.parse(
-        model="gpt-4o",
+        model="gpt-3.5-turbo",
         messages=[
             {"role": "developer", "content": dev_prompt},
             {"role": "user", "content": user_prompt}
         ],
         response_format=RestaurantMenu,
+        max_tokens=100,
+        temperature=0.2
     )
 
     return completion.choices[0].message.parsed.model_dump_json()
