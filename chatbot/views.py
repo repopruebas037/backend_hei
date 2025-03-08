@@ -28,6 +28,20 @@ def chatbot(request):
 
     return JsonResponse({"message": chat_response}, status=200)
 
+@csrf_exempt
+@require_POST
+def save_prompt(request):
+
+    data = json.loads(request.body)
+    prompt = data["prompt"]
+
+    if not prompt:
+        return JsonResponse({"message": "No prompt provided"}, status=400)
+
+    response = services.save_prompt(prompt)
+
+    return JsonResponse({"message": response}, status=200)
+
 VERIFICATION_TOKEN = "abcdefg12345"
 
 @csrf_exempt

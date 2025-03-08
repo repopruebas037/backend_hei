@@ -2,12 +2,19 @@ from typing import List, Optional
 from openai import OpenAI
 from dotenv import load_dotenv
 from django.conf import settings
+from django.http.response import JsonResponse
 import os
+import pymongo
 
 from pydantic import BaseModel
 
+HEII_MONGO_URI = "mongodb+srv://pruebasrepo037:YCXMhu9R74b2rkov@heibackend.dcjmk.mongodb.net/?retryWrites=true&w=majority&appName=heibackend"
+HEII_MONGO_DB_NAME = "heibackend"
 
+heii_mongo_client = pymongo.MongoClient(HEII_MONGO_URI)
+heii_mongo_db = heii_mongo_client[HEII_MONGO_DB_NAME]
 
+prompts_collection = heii_mongo_db['prompts']
 
 load_dotenv()
 
@@ -78,3 +85,11 @@ def get_chat_response(user_prompt):
 
 def generateOrder():
     print(f"La orden es {order}")
+
+
+def save_prompt(prompt):
+    print(prompt)
+    
+    result = prompts_collection.update_one({"_id": "default"}, {"$set": prompt}, upsert=True)
+
+    return JsonResponse({"message": "restaurant created", "id": str(result.inserted_id)}, status=201)
