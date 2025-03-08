@@ -18,12 +18,14 @@ ALLOWED_HOSTS = [
     '.vercel.app',
     'backend-np14mirmk-heis-projects-181257de.vercel.app',  # Backend en Vercel
     'localhost:3000',  # React en desarrollo
+    'b0ac-2800-e2-c80-33c-c111-765-75a5-f67d.ngrok-free.app'
 ]
 
 # Configuración de CORS
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # React en desarrollo
     "https://fronthei.vercel.app",  # (Opcional) Frontend en producción
+    "https://b0ac-2800-e2-c80-33c-c111-765-75a5-f67d.ngrok-free.app",
 ]
 
 CORS_ALLOW_CREDENTIALS = True  # Permitir envío de cookies o tokens de autenticación

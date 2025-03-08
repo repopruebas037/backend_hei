@@ -1,0 +1,73 @@
+[
+  {
+    "type": "text",
+    "text": "¡Hola! Soy Jack y voy a atenderte hoy ¿Deseas ver nuestro menu?"
+  },
+  {
+    "type": "text",
+    "text": "¡Hola! Soy Jack y voy a atenderte hoy ¿Qué te gustaría ordenar hoy?"
+  },
+  {
+    "type": "text",
+    "text": "Claro aqui tienes el menú y muestra el menu"
+  },
+  {
+    "type": "text",
+    "text": "**Queen Master** añadida. ¿La deseas en combo con papas y gaseosa?"
+  },
+  {
+    "type": "text",
+    "text": "Perfecto, ¿quieres **papas francesas** por $9,000 o **papas rústicas** por $10,000?"
+  },
+  {
+    "type": "text",
+    "text": "¡Genial! ¿Y qué gaseosa prefieres? Tenemos **Coca Cola**, **Pepsi**, y más opciones."
+  },
+  {
+    "type": "text",
+    "text": "**Combo Queen Master** con **papas rústicas** y **Coca Cola**. ¿Algo más?"
+  },
+  {
+    "type": "text",
+    "text": "¡Entendido! ¿Deseas añadir alguna salsa gratis como **BBQ**, **mostaza**, **tomate**, o **de la casa**?"
+  },
+  {
+    "type": "text",
+    "text": "**Jack Master** añadida. ¿Te gustaría hacerla combo con papas y gaseosa?"
+  },
+  {
+    "type": "text",
+    "text": "¡Perfecto! ¿Quieres agregar alguna adición como **carne extra**, **queso mozzarella** o **aros de cebolla**?"
+  },
+  {
+    "type": "text",
+    "text": "Entendido, **Magic Master** añadida. ¿Deseas acompañarla con papas o alguna bebida?"
+  },
+  {
+    "type": "text",
+    "text": "**King Master** añadida con **aros de cebolla** como adición. ¿Algo más que desees?"
+  },
+  {
+    "type": "text",
+    "text": "¡Pedido anotado! ¿Quieres algo más o prefieres confirmar tu orden?"
+  },
+  {
+    "type": "text",
+    "text": "Perfecto. Aquí está el resumen de tu pedido, ¿Deseas finalizar tu pedido?:<br><br> \
+      &nbsp;&nbsp;&nbsp;&nbsp;• **Combo Queen Master** con **papas rústicas** y **Coca Cola**<br> \
+      &nbsp;&nbsp;&nbsp;&nbsp;• **Jack Master** con **papas francesas** y **Pepsi**<br><br> \
+      Total: **$19,000**<br><br> \
+      ¿Confirmas tu pedido?"
+  },
+  {
+    "type": "text",
+    "text": "¡Pedido confirmado!:<br><br> 
+      **Combo Queen Master** con **papas rústicas** y **Coca Cola**<br> \
+      &nbsp;&nbsp;&nbsp;&nbsp;• **Jack Master** con **papas francesas** y **Pepsi**<br><br> \
+      Total: **$19,000**"
+  },
+  {
+    "type": "text",
+    "text": "¡Gracias por tu pedido! Estará listo en breve. ¡Que lo disfrutes!"
+  }
+]
