@@ -4,6 +4,7 @@ from . import views
 
 urlpatterns = [
     path('chat', views.chatbot),
-    path('saveprompt', views.save_prompt),    
+    path('saveprompt', views.save_prompt),   
+    path('reloadprompts', views.reload_prompt),    
     path("chatwapp", views.verify_whatsapp),
 ]

@@ -1,9 +1,13 @@
 from django.http import HttpResponse, JsonResponse
+from chatbot.services.prompt_services import PromptService
+from chatbot.services.chat_services import ChatServices
+
+
 from django.views.decorators.http import require_POST
 import json
 import requests
+import pymongo
 
-import chatbot.services as services
 
 """
 **********************************
@@ -13,6 +17,13 @@ This is for testing, DELETE AFTER TESTS !!!
 """
 from django.views.decorators.csrf import csrf_exempt
 
+HEII_MONGO_URI = "mongodb+srv://pruebasrepo037:YCXMhu9R74b2rkov@heibackend.dcjmk.mongodb.net/?retryWrites=true&w=majority&appName=heibackend"
+HEII_MONGO_DB_NAME = "heibackend"
+
+heii_mongo_client = pymongo.MongoClient(HEII_MONGO_URI)
+heii_mongo_db = heii_mongo_client[HEII_MONGO_DB_NAME]
+
+prompts_collection = heii_mongo_db['prompts']
 
 @csrf_exempt
 @require_POST
@@ -24,23 +35,27 @@ def chatbot(request):
     if not user_prompt:
         return JsonResponse({"message": "No prompt provided"}, status=400)
 
-    chat_response = services.get_chat_response(user_prompt)
-
-    return JsonResponse({"message": chat_response}, status=200)
+    return ChatServices.get_chat_response(user_prompt)
 
 @csrf_exempt
 @require_POST
 def save_prompt(request):
 
-    data = json.loads(request.body)
-    prompt = data["prompt"]
+    prompt = json.loads(request.body)    
 
     if not prompt:
         return JsonResponse({"message": "No prompt provided"}, status=400)
 
-    response = services.save_prompt(prompt)
+    return ChatServices.save_prompt(prompt)
 
-    return JsonResponse({"message": response}, status=200)
+from django.apps import apps
+
+@csrf_exempt
+@require_POST
+def reload_prompt(request):
+    PromptService.reload_prompts() 
+    ChatServices.reload_prompts()
+    return JsonResponse({"message":"prompts reloaded"}, status=200)
 
 VERIFICATION_TOKEN = "abcdefg12345"
 
@@ -58,7 +73,6 @@ def verify_whatsapp(request):
     
     if request.method == "POST":
         data = json.loads(request.body)
-        print(data)
         return JsonResponse({"status": "Mensaje recibido"}, status=200)
 
     return JsonResponse({"error": "Método no permitido"}, status=405)
