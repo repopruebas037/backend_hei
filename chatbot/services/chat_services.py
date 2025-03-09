@@ -87,7 +87,7 @@ class ChatServices:
         #si existen productos en la orden
         #la genera, de otro modo el chatbot se despide.         
         if "finalizar" in user_prompt_lower:
-            if cls.order:
+            if cls.order_items:
                 cls.generate_order()
                 return JsonResponse({"message": "¡Gracias por tu pedido! Estará listo en breve. ¡Que lo disfrutes!"}, status=200)
             return JsonResponse({"message": "¡Con mucho gusto, ten buen día!"}, status=200)
